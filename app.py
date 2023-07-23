@@ -71,8 +71,6 @@ def main():
                 - `Ozone`: {air_data['list'][0]['components']['o3']} μg/m³\n
                 - `Sulphur Dioxide`: {air_data['list'][0]['components']['so2']} μg/m³\n
                 - `Ammonia`: {air_data['list'][0]['components']['nh3']} μg/m³\n''')
-            df = pd.DataFrame({'lat': [weather_data['coord']['lat']], 'lon': [weather_data['coord']['lon']], 'name': [city], 'population': [weather_data['population']]})
-            st.map(df, latitude='lat', longitude='lon', color='#00ff00')
             weather_json, air_pollution_json = st.columns(2)
             with weather_json:
                 st.subheader('Weather JSON Data')
